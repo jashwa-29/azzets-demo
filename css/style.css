@@ -6875,7 +6875,7 @@ ul.grid-tags li a:hover {
   border-radius: 24px;
   padding-left: 40px;
   padding-right: 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
 }
 #header_main .header-inner .header-inner-wrap #site-logo #logo-header-mobile {
   display: none;
@@ -13788,6 +13788,7 @@ a {
     padding-right: 0;
   }
   #header_main .header-inner .header-inner-wrap .main-menu ul.navigation {
+
     margin-left: 0;
   }
   #header_main .header-inner .header-inner-wrap .main-menu ul.navigation .mega-menu {
