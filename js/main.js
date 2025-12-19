@@ -24,30 +24,119 @@
 
   "use strict";
 
-  var tabs = function(){
+    var _tabsCounter = 0;
+    var tabs = function(){
     $('.widget-tabs').each(function(){
-        $(this).find('.widget-content-tab').children().hide();
-        $(this).find('.widget-content-tab').children(".active").show();
-        $(this).find('.widget-menu-tab').children('.item-title').on('click',function(){
-            var liActive = $(this).index();
-            var contentActive=$(this).siblings().removeClass('active').parents('.widget-tabs').find('.widget-content-tab').children().eq(liActive);
-            contentActive.addClass('active').fadeIn("slow");
-            contentActive.siblings().removeClass('active');
-            $(this).addClass('active').parents('.widget-tabs').find('.widget-content-tab').children().eq(liActive).siblings().hide();
+      var $wrap = $(this);
+      var $menu = $wrap.find('.widget-menu-tab');
+      var $menuItems = $menu.children('.item-title');
+      var $contents = $wrap.find('.widget-content-tab').children();
+
+      // unique base id for aria linking
+      _tabsCounter += 1;
+      var baseId = 'wtab-' + _tabsCounter;
+
+      // initialize roles and ids for accessibility
+      $menu.attr('role','tablist');
+      $menuItems.each(function(i){
+        var $mi = $(this);
+        var tabId = baseId + '-tab-' + i;
+        var panelId = baseId + '-panel-' + i;
+        $mi.attr({
+          'role':'tab',
+          'id': tabId,
+          'aria-controls': panelId,
+          'tabindex': $mi.hasClass('active') ? 0 : -1,
+          'aria-selected': $mi.hasClass('active') ? 'true' : 'false'
         });
-    });
-    $('.widget-tabs-1').each(function(){
-      $(this).find('.widget-content-tab-1').children().hide();
-      $(this).find('.widget-content-tab-1').children(".active-1").show();
-      $(this).find('.widget-menu-tab-1').children('.item-title-1').on('click',function(){
-          var liActive = $(this).index();
-          var contentActive=$(this).siblings().removeClass('active-1').parents('.widget-tabs-1').find('.widget-content-tab-1').children().eq(liActive);
-          contentActive.addClass('active-1').fadeIn("slow");
-          contentActive.siblings().removeClass('active-1');
-          $(this).addClass('active-1').parents('.widget-tabs-1').find('.widget-content-tab-1').children().eq(liActive).siblings().hide();
       });
-  });
-  };
+      $contents.each(function(i){
+        var $c = $(this);
+        var tabId = baseId + '-tab-' + i;
+        var panelId = baseId + '-panel-' + i;
+        $c.attr({
+          'role':'tabpanel',
+          'id': panelId,
+          'aria-labelledby': tabId,
+          'tabindex': 0
+        });
+      });
+
+      // show initial active
+      $contents.hide();
+      $contents.filter('.active').show();
+
+      var activate = function(idx){
+        idx = parseInt(idx,10);
+        $menuItems.each(function(i){
+          var $mi = $(this);
+          var selected = (i === idx);
+          $mi.toggleClass('active', selected);
+          $mi.attr('aria-selected', selected ? 'true' : 'false');
+          $mi.attr('tabindex', selected ? 0 : -1);
+        });
+        $contents.removeClass('active').hide();
+        var $activeContent = $contents.eq(idx);
+        $activeContent.addClass('active').fadeIn('slow');
+      };
+
+      // click handler
+      $menuItems.off('click.tabs').on('click.tabs', function(e){
+        var idx = $(this).index();
+        activate(idx);
+      });
+
+      // keyboard navigation for accessibility
+      $menuItems.off('keydown.tabs').on('keydown.tabs', function(e){
+        var key = e.key;
+        var cur = $(this).index();
+        var len = $menuItems.length;
+        var target;
+        if(key === 'ArrowRight' || key === 'ArrowDown'){
+          target = (cur + 1) % len;
+          $menuItems.eq(target).focus();
+          activate(target);
+          e.preventDefault();
+        } else if(key === 'ArrowLeft' || key === 'ArrowUp'){
+          target = (cur - 1 + len) % len;
+          $menuItems.eq(target).focus();
+          activate(target);
+          e.preventDefault();
+        } else if(key === 'Home'){
+          $menuItems.eq(0).focus();
+          activate(0);
+          e.preventDefault();
+        } else if(key === 'End'){
+          $menuItems.eq(len-1).focus();
+          activate(len-1);
+          e.preventDefault();
+        } else if(key === 'Enter' || key === ' '){
+          activate(cur);
+          e.preventDefault();
+        }
+      });
+    });
+
+    // keep legacy widget-tabs-1 behavior (no ARIA enhancements)
+    $('.widget-tabs-1').each(function(){
+      var $wrap = $(this);
+      var $menuItems = $wrap.find('.widget-menu-tab-1').children('.item-title-1');
+      var $contents = $wrap.find('.widget-content-tab-1').children();
+
+      $contents.hide();
+      $contents.filter('.active-1').show();
+
+      $menuItems.off('click.tabs1').on('click.tabs1', function(){
+        var idx = $(this).index();
+        $menuItems.removeClass('active-1');
+        $(this).addClass('active-1');
+
+        $contents.removeClass('active-1').hide();
+        var $activeContent = $contents.eq(idx);
+        $activeContent.addClass('active-1').fadeIn('slow');
+      });
+    });
+    };
 
   var box_search=function(){
         

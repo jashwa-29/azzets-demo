@@ -537,6 +537,28 @@
     }
 }
 
+/* Improve visibility of active widget tabs and their cards */
+.widget-tabs.style-1 .widget-menu-tab .item-title.active {
+    background-color: var(--Secondary) !important;
+    border-color: var(--Secondary) !important;
+}
+.widget-tabs.style-1 .widget-menu-tab .item-title.active .inner {
+    color: #ffffff !important;
+}
+
+/* Ensure active tab content cards look enabled */
+.widget-content-tab .widget-content-inner.active .box-dream {
+    opacity: 1 !important;
+    filter: none !important;
+    pointer-events: auto !important;
+    transform: none !important;
+}
+
+/* Small accent to make active tab stand out */
+.widget-tabs.style-1 .widget-menu-tab .item-title.active {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
 /* Why Us Grid Layout */
 .why-us-grid {
     display: grid;

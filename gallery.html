@@ -514,23 +514,34 @@
         <!-- #page -->
         <div id="page" class="">
             
-            <!-- header -->
+             <!-- header -->
             <header id="header_main" class="header header-fixed">
                 <div class="header-inner"> 
                     <div class="header-inner-wrap">
                         <div id="site-logo">
                             <a href="index.html" rel="home">
-                                <img id="logo-header" class="logo" src="images/logo/azzets-dark-logo.png" alt="Azzets Logo">
-                                <img id="logo-header-mobile" class="mobile-logo" src="images/logo/azzets-dark-logo.png" alt="Azzets Logo">
+                              <img id="logo-header" class="logo" src="images/logo/azzets-dark-logo.png"  alt="">
+                                <img id="logo-header-mobile" class="mobile-logo" src="images/logo/azzets-dark-logo.png" alt="">
                             </a>
                         </div>
                         <nav class="main-menu">
                             <ul class="navigation">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="projects.html">Projects</a></li>
-                                <li class="current"><a href="gallery.html">Gallery</a></li>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="services.html">Services</a>
+                                </li>
+                                <li>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li class="current">
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                             
                             </ul>
                         </nav>
                         <div class="header-right">
@@ -554,9 +565,9 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
-                        <li><a href="gallery.html" class="active">Gallery</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -722,6 +733,17 @@
     <script src="js/wow.min.js"></script>
     <script src="js/scrollmagic.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        const menu = new Mmenu(document.querySelector("#menu"));
+        var closeBtn = document.querySelector("#menu .close");
+        if(closeBtn){
+            closeBtn.addEventListener("click", function(e){
+                e.preventDefault();
+                menu.close();
+            });
+        }
+    </script>
 
     <script>
         $(document).ready(function() {
