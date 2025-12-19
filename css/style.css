@@ -7173,7 +7173,7 @@ ul.grid-tags li a:hover {
   width: 100%;
 }
 #header_main.style-no-bg .header-inner .header-inner-wrap {
-  background-color: transparent;
+  box-shadow: none;
   border: 0;
 }
 #header_main.style-no-bg.is-fixed.is-small .header-inner .header-inner-wrap {
