@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+ <title>JustHome - Real Estate HTML Template</title>
+
+    <meta name="author" content="creativelayers">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
+    <link rel="stylesheet" type="text/css" href="css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mmenu.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="font/fonts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="icon/flaticon_just-home.css">
+    <link rel="stylesheet" type="text/css" href="icon/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="images/logo/fav.png">
+    <link rel="apple-touch-icon-precomposed" href="images/logo/fav.png">
+
+</head>
+
+<body class="body">
+
+    <!-- preload -->
+    <div class="preload preload-container">
+        <div class="middle"></div>
+    </div>
+    <!-- /preload -->
+
+    <!-- #wrapper -->
+    <div id="wrapper">
+        <!-- #page -->
+        <div id="page" class="">
+            
+            <!-- header -->
+            <header id="header_main" class="header header-fixed">
+                <div class="header-inner"> 
+                    <div class="header-inner-wrap">
+                        <div id="site-logo">
+                            <a href="index.html" rel="home">
+                              <img id="logo-header" class="logo" src="images/logo/azzets-dark-logo.png"  alt="">
+                                <img id="logo-header-mobile" class="mobile-logo" src="images/logo/azzets-dark-logo.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="main-menu">
+                            <ul class="navigation">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li class="current">
+                                    <a href="services.html">Services</a>
+                                </li>
+                                <li>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                             
+                            </ul>
+                        </nav>
+                        <div class="header-right">
+                            <div class="header-call">
+                                <div class="icon">
+                                    <i class="flaticon-phone"></i>
+                                </div>
+                                <div class="number">+91 9994194859</div>
+                            </div>
+                            <div class="header-btn">
+                                <a href="./contact.html" class="tf-button-default">Contact Us</a>
+                            </div>
+                        </div>
+                        <a class="mobile-nav-toggler mobile-button" href="#menu"></a>
+                    </div>
+                </div>
+                <nav id="menu">
+                    <a class="close" aria-label="Close menu" href="#page">
+                        <i class="icon-close"></i>
+                    </a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- /header -->
+
+            <!-- main-content -->
+            <div class="main-content px-20 default">
+                
+                <!-- Custom Styles for Services Page -->
+                <style>
+                    /* Reduce section spacing */
+                    .tf-section {
+                        padding: 80px 0; /* Slightly increased for better separation */
+                    }
+
+                    /* Removing old box-service-modern styles */
+              
+                    .section-bg-light {
+                        background-color: #F9F7F3;
+                    }
+                    /* New Sections Styling */
+                    .box-why-us {
+                        padding: 40px 30px;
+                        background: #fff;
+                        border-radius: 16px;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+                        height: 100%;
+                        transition: all 0.3s ease;
+                        border-bottom: 3px solid transparent;
+                    }
+
+                    /* --- SERVICE OFFER CARD (What We Offer) --- */
+                    .service-offer-card {
+                        background: #fff;
+                        padding: 40px;
+                        border-radius: 16px;
+                        border: 1px solid #eee;
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        position: relative;
+                        overflow: hidden;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    .service-offer-card::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 4px;
+                        height: 0;
+                        background: var(--Primary, #a37e58);
+                        transition: height 0.4s ease;
+                    }
+                    .service-offer-card:hover {
+                        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+                        transform: translateY(-5px);
+                        border-color: transparent;
+                    }
+                    .service-offer-card:hover::before {
+                        height: 100%;
+                    }
+                    .service-offer-card .icon-box {
+                        width: 80px;
+                        height: 80px;
+                        background: #fdfdfd;
+                        border: 1px solid #f0f0f0;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 25px;
+                        color: #1a1a1a;
+                        font-size: 32px;
+                        transition: all 0.4s ease;
+                    }
+                    .service-offer-card:hover .icon-box {
+                        background: var(--Primary, #a37e58);
+                        color: #fff;
+                        border-color: var(--Primary, #a37e58);
+                        transform: rotateY(180deg);
+                    }
+                    .service-offer-card:hover .icon-box i {
+                        transform: rotateY(-180deg);
+                        display: inline-block;
+                    }
+                    .service-offer-card .title {
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                        color: #1a1a1a;
+                    }
+                    .service-offer-card p {
+                        font-size: 16px;
+                        color: #555; /* Darker for better readability */
+                        margin-bottom: 0;
+                        line-height: 1.7; /* Increased line-height */
+                    }
+                    .box-why-us:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+                        border-bottom-color: var(--Primary, #a37e58);
+                    }
+                    .box-why-us .icon-wrapper {
+                        margin-bottom: 20px;
+                        display: inline-block;
+                        padding: 15px;
+                        background: #F9F7F3;
+                        border-radius: 50%;
+                        color: var(--Primary, #a37e58);
+                        font-size: 28px;
+                    }
+                    .box-why-us h4 {
+                        margin-bottom: 15px;
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: #1a1a1a;
+                    }
+                    
+                    .box-process-step {
+                        position: relative;
+                        padding: 40px 30px;
+                        background: #fff;
+                        border-radius: 20px;
+                        text-align: center;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                        height: 100%;
+                        border: 1px solid #f0f0f0;
+                        transition: all 0.3s ease;
+                    }
+                    .box-process-step:hover {
+                         border-color: var(--Primary, #a37e58);
+                    }
+                    .box-process-step .step-number {
+                        width: 60px;
+                        height: 60px;
+                        background: var(--Primary, #a37e58);
+                        color: #fff;
+                        border-radius: 50%;
+                        font-size: 24px;
+                        font-weight: 700;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto 25px;
+                        box-shadow: 0 5px 15px rgba(163, 126, 88, 0.3);
+                    }
+                    .box-process-step h4 {
+                        margin-bottom: 15px;
+                        font-size: 20px;
+                    }
+
+                    .box-value-prop {
+                        background: #333; /* Dark background for contrast */
+                        color: #fff;
+                        padding: 60px;
+                        border-radius: 24px;
+                        position: relative;
+                        overflow: hidden;
+                        text-align: center;
+                    }
+                    .box-value-prop::before {
+                        content: '';
+                        position: absolute;
+                        top: 0; left: 0; right: 0; bottom: 0;
+                        background: url('images/pattern/pattern.png'); /* If available, or just texture */
+                        opacity: 0.1;
+                    }
+                    .box-value-prop h2 {
+                        color: #fff;
+                        margin-bottom: 20px;
+                        font-size: 36px;
+                    }
+                    .box-value-prop p {
+                        color: rgba(255,255,255,0.9);
+                        font-size: 18px;
+                        max-width: 800px;
+                        margin: 0 auto 30px;
+                        line-height: 1.6;
+                    }
+
+                    /* --- NEW STYLES FOR CORE SERVICES (Image Cards) --- */
+                    .service-card-image {
+                        position: relative;
+                        height: 420px; /* Increased height for better text wrapping and spacing */
+                        border-radius: 20px;
+                        overflow: hidden;
+                        display: block;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                        transition: all 0.4s ease;
+                    }
+                    .service-card-image:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+                    }
+                    .service-card-image .bg-image {
+                        position: absolute;
+                        top: 0; left: 0; right: 0; bottom: 0;
+                        background-size: cover;
+                        background-position: center;
+                        transition: transform 0.6s ease;
+                    }
+                    .service-card-image:hover .bg-image {
+                        transform: scale(1.1);
+                    }
+                    .service-card-image .overlay {
+                        position: absolute;
+                        top: 0; left: 0; right: 0; bottom: 0;
+                        background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.3)); /* Darker and higher gradient */
+                        z-index: 1;
+                    }
+                    .service-card-image .content {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 40px 30px; /* Increased top/bottom padding */
+                        z-index: 2;
+                        color: #fff;
+                    }
+                    .service-card-image .icon-box {
+                        font-size: 30px;
+                        margin-bottom: 20px; /* Increased space */
+                        color: var(--Primary, #a37e58);
+                        background: rgba(255,255,255,0.15); /* Slightly more visible */
+                        width: 70px; /* Larger icon box */
+                        height: 70px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        backdrop-filter: blur(5px);
+                    }
+                    .service-card-image h4 {
+                        font-size: 26px; /* Larger title */
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                        color: #fff;
+                        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                        line-height: 1.3;
+                    }
+                    .service-card-image p {
+                        color: rgba(255,255,255,0.95);
+                        font-size: 16px;
+                        line-height: 1.7; /* Better readability */
+                        margin-bottom: 20px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4; /* Allow more text */
+                        line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                    .service-card-image .read-more {
+                        color: var(--Primary, #a37e58);
+                        font-weight: 700;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        letter-spacing: 0.5px;
+                    }
+
+                    /* --- NEW STYLES FOR ALLIED SERVICES (Minimal Row) --- */
+                    .service-card-minimal {
+                        display: flex;
+                        align-items: flex-start; /* Align to top for better multi-line text */
+                        padding: 30px; /* More padding */
+                        background: #fff;
+                        border-radius: 16px; /* More rounded */
+                        border: 1px solid #eee;
+                        transition: all 0.3s ease;
+                        height: 100%;
+                    }
+                    .service-card-minimal:hover {
+                        border-color: var(--Primary, #a37e58);
+                        box-shadow: 0 15px 40px rgba(0,0,0,0.08); /* Soft shadow */
+                        transform: translateY(-5px); /* Move up instead of right */
+                    }
+                    .service-card-minimal .icon-box {
+                        flex-shrink: 0;
+                        width: 60px; /* Slightly smaller for cleaner look */
+                        height: 60px;
+                        background: #f9f9f9;
+                        border-radius: 50%; /* Circle icon */
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 26px;
+                        color: var(--Primary, #a37e58);
+                        margin-right: 25px;
+                        transition: all 0.3s ease;
+                    }
+                    .service-card-minimal:hover .icon-box {
+                        background: var(--Primary, #a37e58);
+                        color: #fff;
+                    }
+                    .service-card-minimal .content {
+                        flex-grow: 1;
+                    }
+                    .service-card-minimal h4 {
+                        font-size: 20px; 
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                        color: #1a1a1a;
+                        line-height: 1.3;
+                    }
+                    .service-card-minimal p {
+                        font-size: 16px;
+                        color: #666;
+                        margin-bottom: 0;
+                        line-height: 1.7;
+                    }
+                    /* GSAP Animation Targets (Initial States handled by GSAP) */
+                    .service-card-image,
+                    .service-card-minimal,
+                    .box-why-us {
+                        opacity: 0; /* Hidden initially, GSAP will handle fade-in */
+                        visibility: hidden;
+                    }
+                </style>
+
+                <div class="space-20"></div>
+
+                <!-- flat-title -->
+                <section class="flat-title inner-page services-page">
+                    <div class="cl-container full">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="content">
+                                    <h2>Our Services</h2>
+                                    <div class="text">World-class real estate services tailored for you</div>
+                                    <ul class="breadcrumbs">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li>/</li>
+                                        <li>Services</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /flat-title -->
+      <!-- Our Approach (New Design: Perfect Home) -->
+                <section class="tf-section perfect-home">
+                    <div class="cl-container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="wrap-image">
+                                    <div class="image mb-20 wow fadeInDown">
+                                        <img src="images/section/perfect-home-1.jpg" alt="">
+                                    </div>
+                                    <div class="flex gap20">
+                                        <div class="image wow fadeInLeft">
+                                            <img src="images/section/perfect-home-2.jpg" alt="">
+                                        </div>
+                                        <div class="image wow fadeInRight">
+                                            <img src="images/section/perfect-home-3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="box wow fadeInUp">
+                                        <div class="icon">
+                                            <i class="flaticon-house-1"></i>
+                                        </div>
+                                        <div>
+                                            <p>Properties For Sale</p>
+                                            <h4>14K+</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="content-right">
+                                    <h2 class="wow fadeInUp">Our Approach <br> A systematic path</h2>
+                                    <div class="text-content wow fadeInUp" data-wow-delay="0.1s">We follow a transparent and structured process to ensure your real estate application and purchasing needs are met with precision and care.</div>
+                                    <div class="list">
+                                        <div class="box-icon style-2 wow fadeInUp" data-wow-delay="0.2s">
+                                            <div class="icon has-ellipse small">
+                                                <i class="flaticon-chat"></i>
+                                            </div>
+                                            <div class="content">
+                                                <a href="#" class="title">1. Consultation</a> 
+                                                <p>We listen to your specific needs and goals.</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-icon style-2 wow fadeInUp" data-wow-delay="0.3s">
+                                            <div class="icon has-ellipse small">
+                                                <i class="flaticon-management"></i>
+                                            </div>
+                                            <div class="content">
+                                                <a href="#" class="title">2. Strategy</a> 
+                                                <p>We develop a custom plan tailored to the market.</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-icon style-2 wow fadeInUp" data-wow-delay="0.4s">
+                                            <div class="icon has-ellipse small">
+                                                <i class="flaticon-work"></i>
+                                            </div>
+                                            <div class="content">
+                                                <a href="#" class="title">3. Execution & Delivery</a> 
+                                                <p>Expert negotiation, documentation, and seamless handover.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Our Approach -->
+
+                <!-- Core Services (New Design: Image Cards) -->
+                <section class="tf-section ">
+                    <div class="cl-container">
+                        <div class="row justify-center">
+                            <div class="col-lg-10">
+                                <div class="heading-section text-center">
+                                    <h2 class="wow fadeInUp">Core Services</h2>
+                                    <div class="text wow fadeInUp" style="max-width: 800px; margin-left: auto; margin-right: auto;">Our unparalleled network of experts means we are able to monitor and track activity across all the Indian Real Estate industry to offer our clients informed and insightful strategic advice.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Service 1 -->
+                            <div class="col-lg-4 col-md-6 mb-30">
+                                <div class="service-card-image">
+                                    <div class="bg-image" style="background-image: url('images/house/home-1.jpg');"></div>
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                        <div class="icon-box">
+                                            <i class="flaticon-location"></i>
+                                        </div>
+                                        <h4>Layout Promoters</h4> 
+                                        <p>We desire to earn people's trust and confidence while we create whenever they launch new layout under one community and services. We Provide CMDA, DTCP Approved Layout promoters.</p>
+                                        <span class="read-more">Learn More <i class="icon-arrow-right-add"></i></span>
+                                    </div>
+                                    <a href="#" class="full-link" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:3;"></a>
+                                </div>
+                            </div>
+                            <!-- Service 2 -->
+                            <div class="col-lg-4 col-md-6 mb-30">
+                                <div class="service-card-image">
+                                    <div class="bg-image" style="background-image: url('images/house/home-2.jpg');"></div>
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                        <div class="icon-box">
+                                            <i class="flaticon-home"></i>
+                                        </div>
+                                        <h4>Properties Buying & Selling</h4> 
+                                        <p>Our team is involved from beginning to end and we believe that in having a clear understanding of your needs, getting to know your likes and dislikes we are then able to work hand in hand with you in finding your dream property.</p>
+                                        <span class="read-more">Learn More <i class="icon-arrow-right-add"></i></span>
+                                    </div>
+                                    <a href="#" class="full-link" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:3;"></a>
+                                </div>
+                            </div>
+                            <!-- Service 3 -->
+                            <div class="col-lg-4 col-md-6 mb-30">
+                                <div class="service-card-image">
+                                    <div class="bg-image" style="background-image: url('images/house/home-3.jpg');"></div>
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                        <div class="icon-box">
+                                            <i class="flaticon-user"></i>
+                                        </div>
+                                        <h4>Liaison</h4> 
+                                        <p>Over the years the Firm has advised and assisted several foreign investors in planning their investment strategy in real estate related projects in India.</p>
+                                        <span class="read-more">Learn More <i class="icon-arrow-right-add"></i></span>
+                                    </div>
+                                    <a href="#" class="full-link" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:3;"></a>
+                                </div>
+                            </div>
+                            <!-- Service 4 -->
+                            <div class="col-lg-4 col-md-6 mb-30">
+                                <div class="service-card-image">
+                                    <div class="bg-image" style="background-image: url('images/house/home-4.jpg');"></div>
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                        <div class="icon-box">
+                                            <i class="flaticon-building"></i>
+                                        </div>
+                                        <h4>Civil Constructions</h4> 
+                                        <p>The building gets cracked, ceiling falls down, the pillars get cracked, etc. This will be solved by our professional expert team.</p>
+                                        <span class="read-more">Learn More <i class="icon-arrow-right-add"></i></span>
+                                    </div>
+                                    <a href="#" class="full-link" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:3;"></a>
+                                </div>
+                            </div>
+                            <!-- Service 5 -->
+                            <div class="col-lg-4 col-md-6 mb-30">
+                                <div class="service-card-image">
+                                    <div class="bg-image" style="background-image: url('images/house/home-5.jpg');"></div>
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                        <div class="icon-box">
+                                            <i class="flaticon-house-1"></i>
+                                        </div>
+                                        <h4>Property Maintenance & Management</h4> 
+                                        <p>No matter what type of property you own, it is crucial to have the right assistance in maintaining it. Experts not only take care of your property for personal use but also help with commercial property maintenance.</p>
+                                        <span class="read-more">Learn More <i class="icon-arrow-right-add"></i></span>
+                                    </div>
+                                    <a href="#" class="full-link" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:3;"></a>
+                                </div>
+                            </div>
+                            <!-- Service 6 -->
+                            <div class="col-lg-4 col-md-6 mb-30">
+                                <div class="service-card-image">
+                                    <div class="bg-image" style="background-image: url('images/house/home-6.jpg');"></div>
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                        <div class="icon-box">
+                                            <i class="flaticon-minus-front"></i>
+                                        </div>
+                                        <h4>Warehouse Consultant</h4> 
+                                        <p>We help businesses and storage facilities improve their operations by providing expertise and advice on best practices</p>
+                                        <span class="read-more">Learn More <i class="icon-arrow-right-add"></i></span>
+                                    </div>
+                                    <a href="#" class="full-link" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:3;"></a>
+                                </div>
+                            </div>
+                            <!-- Service 7 -->
+                            <div class="col-lg-12 col-md-12 mb-30">
+                                <div class="service-card-image" style="height: 300px;">
+                                    <div class="bg-image" style="background-image: url('images/house/home-1.jpg'); background-position: center bottom;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="content" style="text-align:center; left:0; right:0; max-width: 800px; margin: 0 auto;">
+                                        <div class="icon-box" style="margin: 0 auto 20px;">
+                                            <i class="flaticon-shield"></i>
+                                        </div>
+                                        <h4>Property Documentation & Services</h4> 
+                                        <p>Offering legal assistance for real estate transactions, including drafting contracts, reviewing documents, and resolving disputes. Drafting and Vetting for all property related documents</p>
+                                        <span class="read-more">Learn More <i class="icon-arrow-right-add"></i></span>
+                                    </div>
+                                    <a href="#" class="full-link" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:3;"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Core Services -->
+                
+                <!-- Allied Services (New Design: Minimal Media Object Row) -->
+                <section class="tf-section section-bg-light">
+                    <div class="cl-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="heading-section text-center">
+                                    <h2 class="wow fadeInUp">Allied Services</h2>
+                                    <div class="text wow fadeInUp">Expanded offerings to cover all your needs</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                             <!-- Allied 1 -->
+                            <div class="col-lg-6 col-md-12 mb-30">
+                                <div class="service-card-minimal">
+                                    <div class="icon-box">
+                                        <i class="flaticon-location"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Resale Plots</h4>
+                                        <p>Secure CMDA and DTCP approved resale plots in prime locations, ensuring safe and high-appreciation investments for your future.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Allied 2 -->
+                            <div class="col-lg-6 col-md-12 mb-30">
+                                <div class="service-card-minimal">
+                                    <div class="icon-box">
+                                        <i class="flaticon-cottage"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Individual House / Villas</h4>
+                                        <p>Find your perfect independent living space, from self-contained units to luxury villas, designed for comfort and privacy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Allied 3 -->
+                            <div class="col-lg-6 col-md-12 mb-30">
+                                <div class="service-card-minimal">
+                                    <div class="icon-box">
+                                        <i class="flaticon-house-1"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Farm Land</h4>
+                                        <p>Farm land can be very large: some farms are more than 100 acres. The agent must be familiar with livestock farms and crop producing farms to determine the market value of the property. Value of the property is determined with the expected return on investment of the farm business.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Allied 4 -->
+                            <div class="col-lg-6 col-md-12 mb-30">
+                                <div class="service-card-minimal">
+                                    <div class="icon-box">
+                                        <i class="flaticon-building"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Industrial Land</h4>
+                                        <p>Industrial real estate can be classified into Land, office, warehouse, retail, lab or manufacturing space. A warehouse is a building for storing goods. Warehouses are used by manufacturers, importers, exporters, wholesalers, transport businesses, customs etc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Allied 5 -->
+                            <div class="col-lg-6 col-md-12 mb-30">
+                                <div class="service-card-minimal">
+                                    <div class="icon-box">
+                                        <i class="flaticon-buildings"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Commercial Building</h4>
+                                        <p>Commercial property typically refers to a building that house businesses, land that is intended to make a profit, and larger residential rental properties. The classification of a property as a commercial property has implications on financing, tax treatment, and the laws which apply to it.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Allied 6 -->
+                            <div class="col-lg-6 col-md-12 mb-30">
+                                <div class="service-card-minimal">
+                                    <div class="icon-box">
+                                        <i class="flaticon-hotel"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4>Flat / Old / New</h4>
+                                        <p>A flat typically refers to a self-contained living unit within a larger building. It is often used interchangeably with “apartment.” Flats are usually part of a multi-story building, and each unit has its own kitchen, bathroom, and living space.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Allied Services -->
+     
+
+                <!-- Our Core Values -->
+                <section class="tf-section">
+                    <div class="cl-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="heading-section text-center">
+                                    <h2 class="wow fadeInUp">Our Core Values</h2>
+                                    <div class="text wow fadeInUp">Building relationships on transparency and results</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-30">
+                                <div class="box-why-us">
+                                    <div class="icon-wrapper">
+                                        <i class="flaticon-cottage"></i>
+                                    </div>
+                                    <h4>Mission</h4>
+                                    <p>Our commitment is to develop Gated Community and Residential Plot Development Projects which correlate to international standards and provide you with the best of all.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-30">
+                                <div class="box-why-us">
+                                    <div class="icon-wrapper">
+                                        <i class="flaticon-magnifiying-glass"></i>
+                                    </div>
+                                    <h4>Vision</h4>
+                                    <p>To be the market leader in Gated Community and Residential Plot Development Projects throughout India by providing unrivalled customer value.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-30">
+                                <div class="box-why-us">
+                                    <div class="icon-wrapper">
+                                        <i class="flaticon-user"></i>
+                                    </div>
+                                    <h4>Relationship</h4>
+                                    <p>We believe in building lasting relationships with our customers by going above and beyond their expectations and delivering customer delight.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-30">
+                                <div class="box-why-us">
+                                    <div class="icon-wrapper">
+                                        <i class="flaticon-shield"></i>
+                                    </div>
+                                    <h4>Trust</h4>
+                                    <p>Offering a range of spacious, well designed apartments with exceptional facilities in prime locations across the city.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Our Core Values -->
+
+          
+
+            </div>
+            <!-- /main-content -->
+
+    <!-- footer -->
+            <!-- footer -->
+<!-- footer -->
+            <footer class="footer-elegant">
+                <div class="cl-container">
+                    <div class="footer-content-wrapper">
+                    
+
+                        <!-- Main Grid -->
+                        <div class="footer-main-grid">
+                            <!-- Brand -->
+                            <div class="footer-brand-col wow fadeInUp" data-wow-delay="0.1s">
+                                <a href="index.html">
+                                    <img src="images/logo/logo.png" alt="Azzets" class="footer-logo" style="filter: brightness(0) invert(1);">
+                                </a>
+                                <p>We are a global real estate agency that specializes in luxury properties, ensuring every transaction wraps in excellence and trust.</p>
+                                <div class="social-icons-modern">
+                                    <a href="#"><i class="icon-facebook"></i></a>
+                                    <a href="#"><i class="icon-twitter"></i></a>
+                                    <a href="#"><i class="icon-instagram"></i></a>
+                                    <a href="#"><i class="icon-linkedin2"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Links 1 -->
+                            <div class="footer-nav-col wow fadeInUp" data-wow-delay="0.2s">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="projects.html">Our Works</a></li>
+                                    <li><a href="blog-list-v1.html">News & Insights</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Links 2 -->
+                            <div class="footer-nav-col wow fadeInUp" data-wow-delay="0.3s">
+                                <h4>Discover</h4>
+                                <ul>
+                                    <li><a href="#">New York</a></li>
+                                    <li><a href="#">Los Angeles</a></li>
+                                    <li><a href="#">Chicago</a></li>
+                                    <li><a href="#">Miami</a></li>
+                                    <li><a href="#">San Francisco</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Subscribe & Info -->
+                            <div class="footer-subscribe-col wow fadeInUp" data-wow-delay="0.4s">
+                                <h4>Stay Connected</h4>
+                                <form class="newsletter-box-modern">
+                                    <input type="email" placeholder="Email Address">
+                                    <button type="submit"><i class="icon-arrow-right-add"></i></button>
+                                </form>
+                                <div class="contact-info-minimal">
+                                    <div class="item">
+                                        <i class="flaticon-location"></i>
+                                        <div>
+                                            <span class="label">Location</span>
+                                            <span class="value">90 Fifth Avenue, 3rd Floor<br>San Francisco, CA 1980</span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="flaticon-phone"></i>
+                                        <div>
+                                            <span class="label">Call Center</span>
+                                            <span class="value">(123) 456-7890</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Bar -->
+                        <div class="footer-bottom-bar">
+                            <span class="copyright-text">© 2025 Azzets Inc. All Rights Reserved. <span class="sep">|</span> <span class="dev-credit">Designed & Developed by Swiflare Ai Innovations</span></span>
+                            <div class="footer-legal-links">
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                                <a href="terms-of-service.html">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /footer -->
+            <!-- /footer -->
+            <!-- /footer -->
+
+        </div>
+        <!-- /#page -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- go top button -->
+    <div class="progress-wrap active-progress">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 286.138;"></path>
+        </svg>
+    </div>
+    <!-- /go top button -->
+
+
+
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/countto.js"></script>
+    <script src="js/circletype.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFC3m2n0jBRFTMvUNZc0-6Y0Rzlcadzcw"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/marker.js"></script>
+    <script src="js/infobox.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/apexcharts.js"></script>
+    <script src="js/area-chart.js"></script>
+    <script src="js/morris.min.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script src="js/morris.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/rangle-slider.js"></script>
+    <script src="js/mmenu.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/scrollmagic.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- Core Services Animation ---
+        gsap.utils.toArray('.service-card-image').forEach((card, index) => {
+            gsap.fromTo(card, 
+                { 
+                    autoAlpha: 0, 
+                    y: 50,
+                    scale: 0.95
+                },
+                {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    duration: 1,
+                    autoAlpha: 1,
+                    y: 0,
+                    scale: 1,
+                    ease: "power3.out",
+                    delay: (index % 3) * 0.1 // Stagger based on column position approx
+                }
+            );
+        });
+
+        // --- Allied Services Animation (Minimal Cards) ---
+        // Animate them in batches of rows if possible, or just stagger nicely
+        gsap.utils.toArray('.service-card-minimal').forEach((card, index) => {
+             gsap.fromTo(card,
+                {
+                    autoAlpha: 0,
+                    x: -30
+                },
+                {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%",
+                        toggleActions: "play none none reverse"
+                    },
+                    duration: 0.8,
+                    autoAlpha: 1,
+                    x: 0,
+                    ease: "back.out(1.7)", // Nice little bounce effect
+                    delay: (index % 2) * 0.2 
+                }
+             );
+             
+             // Continuous float effect for icons using GSAP to replace CSS
+             const icon = card.querySelector('.icon-box');
+             if(icon) {
+                 gsap.to(icon, {
+                     y: -6,
+                     duration: 1.5,
+                     yoyo: true,
+                     repeat: -1,
+                     ease: "sine.inOut"
+                 });
+             }
+        });
+
+        // --- Core Values Animation ---
+        gsap.fromTo('.box-why-us', 
+            {
+                autoAlpha: 0,
+                y: 40,
+                rotationX: 10
+            },
+            {
+                scrollTrigger: {
+                    trigger: ".box-why-us",
+                    start: "top 80%",
+                },
+                stagger: 0.2, // Stagger input for all items with this class found at once
+                duration: 1,
+                autoAlpha: 1,
+                y: 0,
+                rotationX: 0,
+                ease: "power2.out"
+            }
+        );
+
+    </script>
+
+    <script>
+        const menu = new Mmenu(document.querySelector("#menu"));
+        var closeBtn = document.querySelector("#menu .close");
+        if(closeBtn){
+            closeBtn.addEventListener("click", function(e){
+                e.preventDefault();
+                menu.close();
+            });
+        }
+    </script>
+
+</body>
+
+</html>
