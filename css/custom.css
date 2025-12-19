@@ -1193,3 +1193,22 @@
     }
 }
 
+    /* Ensure hero slider has no background color (override theme defaults) */
+    .slider.home7,
+    .slider.home7 .swiper-container,
+    .slider.home7 .swiper-wrapper,
+    .slider.home7 .swiper-slide,
+    .slider.home7 .swiper-slide .image,
+    .slider.home7 .slider-content {
+        background: transparent !important;
+        background-color: transparent !important;
+    }
+
+    /* Remove any overlay or tinted pseudo-element that may add bg */
+    .slider.home7 .slider-content::after,
+    .slider.home7 .slider-content::before {
+        background: transparent !important;
+        opacity: 1 !important;
+    }
+
+
