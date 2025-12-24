@@ -1,0 +1,45 @@
+/* Form Validation Styles */
+.error-message {
+    display: block;
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 5px;
+    min-height: 18px;
+    font-weight: 500;
+}
+
+.form-send-message fieldset {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-send-message input.error,
+.form-send-message textarea.error {
+    border-color: #dc3545 !important;
+    background-color: #fff5f5;
+}
+
+.form-send-message input.success,
+.form-send-message textarea.success {
+    border-color: #28a745 !important;
+}
+
+.form-success-message {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-success-message p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.checkbox-item .error-message {
+    margin-left: 0;
+    margin-top: 8px;
+}

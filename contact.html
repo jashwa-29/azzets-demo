@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="icon/flaticon_just-home.css">
     <link rel="stylesheet" type="text/css" href="icon/icomoon/style.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/form-validation.css">
 
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo/fav.png">
@@ -120,7 +121,7 @@
             <div class="main-content spacing-20">
 
                 <div class="wrap-map-v5">
-                    <div id="map-1" class="row-height" data-map-zoom="16" data-map-scroll="true"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6710984894066!2d80.12783097512211!3d12.92884828738261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f0fe0271b81%3A0x9cd5310d616ae1f7!2s43%2C%20Valmiki%20St%2C%20Lic%20Colony%2C%20East%20Tambaram%2C%20Tambaram%2C%20Chennai%2C%20Tamil%20Nadu%20600059!5e0!3m2!1sen!2sin!4v1766572407729!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="row-height"></iframe>
                     <div class="grid-contact">
                         <div class="contact-item wow fadeInUp">
                             <div class="icon">
@@ -180,34 +181,42 @@ azzetsindia@gmail.com
                         </div>
                         <div class="row justify-center">
                             <div class="col-xxl-8">
-                                <form class="form-send-message">
+                                <form class="form-send-message" id="contactForm" novalidate>
                                     <div class="cols">
                                         <fieldset class="name wow fadeInUp has-top-title">
-                                            <input type="text" placeholder="Name" class="" name="text" tabindex="2" value="Ali Tufan" aria-required="true" required="">
-                                            <label for="">Name</label>
+                                            <input type="text" placeholder="Name" class="" name="name" id="name" tabindex="1" value="" aria-required="true" required="">
+                                            <label for="name">Name</label>
+                                            <span class="error-message" id="nameError"></span>
                                         </fieldset>
                                         <fieldset class="phone wow fadeInUp has-top-title">
-                                            <input type="number" placeholder="Phone" class="" name="phone" tabindex="2" value="" aria-required="true" required="">
-                                            <label for="">Phone</label>
+                                            <input type="tel" placeholder="Phone" class="" name="phone" id="phone" tabindex="2" value="" aria-required="true" required="" pattern="[6-9][0-9]{9}">
+                                            <label for="phone">Phone</label>
+                                            <span class="error-message" id="phoneError"></span>
                                         </fieldset>
                                     </div>
                                     <fieldset class="email wow fadeInUp has-top-title">
-                                        <input type="email" placeholder="Email" class="" name="email" tabindex="2" value="themesflat@gmail.com" aria-required="true" required="">
-                                        <label for="">Email</label>
+                                        <input type="email" placeholder="Email" class="" name="email" id="email" tabindex="3" value="" aria-required="true" required="">
+                                        <label for="email">Email</label>
+                                        <span class="error-message" id="emailError"></span>
                                     </fieldset>
                                     <fieldset class="message wow fadeInUp has-top-title">
-                                        <textarea name="message" rows="4" placeholder="Your Message" class="" tabindex="2" aria-required="true" required="">Lorem Ipsum</textarea>
-                                        <label for="">Your Message</label>
+                                        <textarea name="message" id="message" rows="4" placeholder="Your Message" class="" tabindex="4" aria-required="true" required=""></textarea>
+                                        <label for="message">Your Message</label>
+                                        <span class="error-message" id="messageError"></span>
                                   </fieldset>
                                     <div class="checkbox-item wow fadeInUp">
                                         <label>
                                             <p>I consent to having this website store my submitted information</p>
-                                            <input type="checkbox">
+                                            <input type="checkbox" id="consent" name="consent" required="">
                                             <span class="btn-checkbox"></span>
                                         </label>
+                                        <span class="error-message" id="consentError"></span>
                                     </div>
                                     <div class="button-submit wow fadeInUp">
                                         <button class="tf-button-primary w-full" type="submit">Send Message<i class="icon-arrow-right-add"></i></button>
+                                    </div>
+                                    <div class="form-success-message" id="successMessage" style="display: none;">
+                                        <p>Thank you! Your message has been sent successfully.</p>
                                     </div>
                                 </form>
                             </div>
@@ -215,6 +224,60 @@ azzetsindia@gmail.com
                     </div>
                 </section>
                 <!-- /send-message -->
+ 
+                <!-- Investment & FDI Desk -->
+                <section class="tf-section investment-fdi-section" style="background-color: #f9f7f3;">
+                    <div class="cl-container">
+                        <div class="row items-center">
+                            <div class="col-lg-6 mb-30 mb-lg-0">
+                                <div class="heading-section">
+                                    <h2 class="wow fadeInUp">Investment & FDI Desk</h2>
+                                    <div class="text wow fadeInUp" style="font-size: 18px; line-height: 1.8;">
+                                        We facilitate **Foreign Direct Investment (FDI)** for Property Development as per RBI norms. Interested foreigners, NRIs, and PIOs are invited to explore high-value real estate opportunities with us.
+                                    </div>
+                                    <p class="wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 20px;">
+                                        Our dedicated team ensures all legal and financial formalities are handled with precision as per regulatory requirements.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-md-6 mb-30">
+                                        <div class="contact-item wow fadeInUp" style="background: #fff; padding: 30px; border-radius: 16px;">
+                                            <div class="icon" style="margin-bottom: 20px; color: var(--Primary, #a37e58); font-size: 32px;">
+                                                <i class="flaticon-user"></i>
+                                            </div>
+                                            <div class="content">
+                                                <h4 style="margin-bottom: 10px;">Mr. Sadiq</h4>
+                                                <p style="font-size: 14px; margin-bottom: 5px;">Execution & FDI Formalities</p>
+                                                <div style="font-weight: 600; color: #1a1a1a;">
+                                                    Ph: [Contact for Details] <br>
+                                                    Email: [Contact for Details]
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-30">
+                                        <div class="contact-item wow fadeInUp" data-wow-delay="0.1s" style="background: #fff; padding: 30px; border-radius: 16px;">
+                                            <div class="icon" style="margin-bottom: 20px; color: var(--Primary, #a37e58); font-size: 32px;">
+                                                <i class="flaticon-user"></i>
+                                            </div>
+                                            <div class="content">
+                                                <h4 style="margin-bottom: 10px;">Mr. Chandra</h4>
+                                                <p style="font-size: 14px; margin-bottom: 5px;">Execution & FDI Formalities</p>
+                                                <div style="font-weight: 600; color: #1a1a1a;">
+                                                    Ph: [Contact for Details] <br>
+                                                    Email: Sekeranc@gmail.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Investment & FDI Desk -->
 
    
 
@@ -340,6 +403,7 @@ azzetsindia@gmail.com
     <script src="js/wow.min.js"></script>
     <script src="js/scrollmagic.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
 
     <script>
         const menu = new Mmenu(document.querySelector("#menu"));
