@@ -455,20 +455,51 @@
                 </section>
                 <!-- /flat-title -->
       <!-- Our Approach (New Design: Perfect Home) -->
+                <style>
+                    .perfect-home .wrap-image .image img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        border-radius: 16px;
+                    }
+                    .perfect-home .wrap-image > .image:first-child img {
+                        height: 400px;
+                    }
+                    .perfect-home .wrap-image .flex .image img {
+                        height: 300px;
+                    }
+                    .perfect-home .wrap-image .flex {
+                        display: flex;
+                        gap: 20px;
+                    }
+                    .perfect-home .wrap-image .flex .image {
+                        flex: 1;
+                    }
+                    /* Ensure absolute box stays visible and positioned relative to image height */
+                    .perfect-home .wrap-image .box {
+                        z-index: 10;
+                    }
+                    @media (max-width: 991px) {
+                        .perfect-home .content-right {
+                            padding-top: 50px !important;
+                            padding-left: 0 !important;
+                        }
+                    }
+                </style>
                 <section class="tf-section perfect-home">
                     <div class="cl-container">
                         <div class="row">
                             <div class="col-lg-7">
                                 <div class="wrap-image">
                                     <div class="image mb-20 wow fadeInDown">
-                                        <img src="images/section/perfect-home-1.jpg" alt="">
+                                        <img src="images/sectionimages/bef12c493acfe698ee76e162304d1a0a.jpg" alt="">
                                     </div>
                                     <div class="flex gap20">
                                         <div class="image wow fadeInLeft">
-                                            <img src="images/section/perfect-home-2.jpg" alt="">
+                                            <img src="images/sectionimages/c15643181126b869e81996dc5805d947.jpg" alt="">
                                         </div>
                                         <div class="image wow fadeInRight">
-                                            <img src="images/section/perfect-home-3.jpg" alt="">
+                                            <img src="images/sectionimages/dcce50f756826e1298bb55af3e556ea3.jpg" alt="">
                                         </div>
                                     </div>
                                     <div class="box wow fadeInUp">
@@ -537,7 +568,7 @@
                             <!-- Service 1 -->
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="service-card-image">
-                                    <div class="bg-image" style="background-image: url('images/house/home-1.jpg');"></div>
+                                    <div class="bg-image" style="background-image: url('images/sectionimages/e0ccc562c5f56c977313e7f51bac337d.jpg');"></div>
                                     <div class="overlay"></div>
                                     <div class="content">
                                         <div class="icon-box">
@@ -553,7 +584,7 @@
                             <!-- Service 2 -->
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="service-card-image">
-                                    <div class="bg-image" style="background-image: url('images/house/home-2.jpg');"></div>
+                                    <div class="bg-image" style="background-image: url('images/sectionimages/792bb132fb95672bb0bc431ec7f19045.jpg');"></div>
                                     <div class="overlay"></div>
                                     <div class="content">
                                         <div class="icon-box">
@@ -569,7 +600,7 @@
                             <!-- Service 3 -->
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="service-card-image">
-                                    <div class="bg-image" style="background-image: url('images/house/home-3.jpg');"></div>
+                                    <div class="bg-image" style="background-image: url('images/sectionimages/6065ecde8cace355a2ede0a66411c0c5.jpg');"></div>
                                     <div class="overlay"></div>
                                     <div class="content">
                                         <div class="icon-box">
@@ -585,7 +616,7 @@
                             <!-- Service 4 -->
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="service-card-image">
-                                    <div class="bg-image" style="background-image: url('images/house/home-4.jpg');"></div>
+                                    <div class="bg-image" style="background-image: url('images/sectionimages/585564e4657335c6b6087e29f80c893a.jpg');"></div>
                                     <div class="overlay"></div>
                                     <div class="content">
                                         <div class="icon-box">
@@ -601,7 +632,7 @@
                             <!-- Service 5 -->
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="service-card-image">
-                                    <div class="bg-image" style="background-image: url('images/house/home-5.jpg');"></div>
+                                    <div class="bg-image" style="background-image: url('images/sectionimages/a48ed47ba20d055ca444f68aaee8726a.jpg');"></div>
                                     <div class="overlay"></div>
                                     <div class="content">
                                         <div class="icon-box">
@@ -617,7 +648,7 @@
                             <!-- Service 6 -->
                             <div class="col-lg-4 col-md-6 mb-30">
                                 <div class="service-card-image">
-                                    <div class="bg-image" style="background-image: url('images/house/home-4.jpg');"></div>
+                                    <div class="bg-image" style="background-image: url('images/sectionimages/about-img.jpg');"></div>
                                     <div class="overlay"></div>
                                     <div class="content">
                                         <div class="icon-box">
@@ -625,25 +656,35 @@
                                         </div>
                                         <h4>Warehouse Consultant</h4> 
                                         <p>We help businesses and storage facilities improve their operations by providing expertise and advice on best practices</p>
-                                        
                                     </div>
-                                    
                                 </div>
                             </div>
-                            <!-- Service 7 -->
-                            <div class="col-lg-12 col-md-12 mb-30">
-                                <div class="service-card-image" style="height: 300px;">
-                                    <div class="bg-image" style="background-image: url('images/house/home-1.jpg'); background-position: center bottom;"></div>
+                            <!-- Service 7: NRI Service -->
+                            <div class="col-lg-4 col-md-6 mb-30">
+                                <div class="service-card-image">
+                                    <div class="bg-image" style="background-image: url('images/sectionimages/whychooseus.jpg');"></div>
                                     <div class="overlay"></div>
-                                    <div class="content" style="text-align:center; left:0; right:0; max-width: 800px; margin: 0 auto;">
+                                    <div class="content">
+                                        <div class="icon-box">
+                                            <i class="flaticon-video-chat"></i>
+                                        </div>
+                                        <h4>NRI Desk (FDI Specialist)</h4> 
+                                        <p>Comprehensive property solutions for NRIs & PIOs, including investment strategy, remote property management, and full compliance with RBI FEMA norms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service 8: Documentation -->
+                            <div class="col-lg-8 col-md-12 mb-30">
+                                <div class="service-card-image">
+                                    <div class="bg-image" style="background-image: url('images/sectionimages/Our Footprint.jpg'); background-position: center;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="content" style="text-align:center; left:0; right:0; max-width: 800px; margin: 0 auto; top: 50%; transform: translateY(-50%);">
                                         <div class="icon-box" style="margin: 0 auto 20px;">
                                             <i class="flaticon-shield"></i>
                                         </div>
-                                        <h4>Property Documentation & Services</h4> 
-                                        <p>Offering legal assistance for real estate transactions, including drafting contracts, reviewing documents, and resolving disputes. Drafting and Vetting for all property related documents</p>
-                                        
+                                        <h4>Property Documentation & Vetting</h4> 
+                                        <p>Offering specialized legal assistance for real estate transactions, including drafting and vetting all types of property-related documents and resolving title disputes.</p>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
